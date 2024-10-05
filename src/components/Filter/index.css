@@ -8,7 +8,7 @@
 }
 
 .tittle-filter {
-  flex-shrink: 0; /* O título não vai encolher */
+  flex-shrink: 0;
 }
 
 .search {
@@ -16,10 +16,35 @@
   margin-bottom: 10px;
 }
 
+.search input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.search input:focus {
+  border-color: #6390F0; /* Cor ao focar (tema do Pokémon Water) */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search input::placeholder {
+  font-size: 15px;
+  color: #888;
+  font-style: italic;
+}
+
 .type, .gen {
   width: 100%;
-  flex-grow: 1; /* Faz com que essa seção ocupe o máximo de espaço */
-  overflow-y: auto; /* Adiciona rolamento apenas dentro dessa seção, se necessário */
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .type {
@@ -38,4 +63,50 @@ input[type="checkbox"] {
 
 .gen {
   margin-bottom: 10px;
+}
+
+.type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.type-button {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+
+.type-button:hover {
+  transform: scale(1.05);
+}
+
+.type-button.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.gen-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gen-button {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gen-button:hover {
+  transform: scale(1.05);
+}
+
+.gen-button.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

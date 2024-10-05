@@ -6,8 +6,29 @@ export default function Filter({ onFilterChange }) {
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedGenerations, setSelectedGenerations] = useState([]);
 
-  const types = ['Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'];
+  const types = ['Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Bug', 'Psychic', 'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'];
   const generations = ['1', '2', '3', '4', '5', '6', '7', '8'];
+
+  const typeColors = {
+    normal: '#A8A77A',
+    fire: '#EE8130',
+    water: '#6390F0',
+    electric: '#F7D02C',
+    grass: '#7AC74C',
+    ice: '#96D9D6',
+    fighting: '#C22E28',
+    poison: '#A33EA1',
+    ground: '#E2BF65',
+    flying: '#A98FF3',
+    psychic: '#F95587',
+    bug: '#A6B91A',
+    rock: '#B6A136',
+    ghost: '#735797',
+    dragon: '#6F35FC',
+    dark: '#705746',
+    steel: '#B7B7CE',
+    fairy: '#D685AD',
+  };
 
   useEffect(() => {
     handleFilterChange();
@@ -52,31 +73,33 @@ export default function Filter({ onFilterChange }) {
       </div>
       <div className='type'>
         <h4>Tipos</h4>
-        {types.map((type) => (
-          <div key={type}>
-            <input 
-              type='checkbox'
-              id={type}
-              checked={selectedTypes.includes(type)}
-              onChange={() => handleTypeChange(type)}
-            />
-            <label htmlFor={type}>{type}</label>
-          </div>
-        ))}
+        <div className='type-buttons'>
+          {types.map((type) => (
+            <button
+              key={type}
+              className={`type-button ${selectedTypes.includes(type) ? 'selected' : ''}`}
+              onClick={() => handleTypeChange(type)}
+              style={{ backgroundColor: typeColors[type.toLowerCase()], color: 'white' }}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
       </div>
       <div className='gen'>
         <h4>Gerações</h4>
-        {generations.map((generation) => (
-          <div key={generation}>
-            <input 
-              type='checkbox'
-              id={generation}
-              checked={selectedGenerations.includes(generation)}
-              onChange={() => handleGenerationChange(generation)}
-            />
-            <label htmlFor={generation}>Geração {generation}</label>
-          </div>
-        ))}
+        <div className='gen-buttons'>
+          {generations.map((generation) => (
+            <button
+              key={generation}
+              className={`gen-button ${selectedGenerations.includes(generation) ? 'selected' : ''}`}
+              onClick={() => handleGenerationChange(generation)}
+              style={{ backgroundColor: '#888888', color: 'white' }}
+            >
+              Gen {generation}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -45,3 +45,17 @@
   font-size: 14px;
   margin: 2px 0;
 }
+
+.pokemon-types {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pokemon-type {
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 12px;
+}
