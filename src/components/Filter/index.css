@@ -11,7 +11,7 @@
   flex-shrink: 0; /* O título não vai encolher */
 }
 
-.search, .order {
+.search {
   width: 100%;
   margin-bottom: 10px;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './index.css'
+import './index.css';
 
 export default function Pokedex({ filters }) {
   const [pokemons, setPokemons] = useState([]);
@@ -7,7 +7,7 @@ export default function Pokedex({ filters }) {
 
   const fetchPokemons = async () => {
     try {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=898');
       const data = await response.json();
 
       const pokemonDetails = await Promise.all(
@@ -75,7 +75,7 @@ export default function Pokedex({ filters }) {
               <img src={pokemon.sprites.front_default} alt={pokemon.name} />
               <h3>{pokemon.name}</h3>
               <p>ID: {pokemon.id}</p>
-              <p>Tipos: {pokemon.types.map(t => t.type.name).join(', ')}</p>
+              <p>{pokemon.types.map(t => t.type.name).join(', ')}</p>
             </div>
           ))
         ) : (

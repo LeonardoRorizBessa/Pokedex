@@ -8,5 +8,8 @@
 
 .img-pokeball, .img-profile {
   width: 40px;
-  height: auto;
+}
+
+.img-pokemon {
+  height: 50px;
 }

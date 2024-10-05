@@ -5,13 +5,14 @@
 }
 
 .col-header {
-  background-color: #1c1c1c;
+  background-color: #000000;
 }
 
 .col-filter {
-  background-color: rgb(239, 155, 0);
+  background-color: #1c1c1c;
+  color: #dddddd;
 }
 
 .col-pokedex {
-  background-color: rgb(194, 0, 0);
+  background-color: #303030;
 }
