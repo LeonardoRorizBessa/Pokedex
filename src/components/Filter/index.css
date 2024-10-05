@@ -1,0 +1,41 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+}
+
+.tittle-filter {
+  flex-shrink: 0; /* O título não vai encolher */
+}
+
+.search, .order {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.type, .gen {
+  width: 100%;
+  flex-grow: 1; /* Faz com que essa seção ocupe o máximo de espaço */
+  overflow-y: auto; /* Adiciona rolamento apenas dentro dessa seção, se necessário */
+}
+
+.type {
+  margin-bottom: 10px;
+}
+
+.type div, .gen div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.gen {
+  margin-bottom: 10px;
+}

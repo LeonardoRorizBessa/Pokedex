@@ -1,0 +1,47 @@
+.pokedex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.pokedex-container {
+  height: 90vh; /* Define uma altura fixa para a área dos Pokémon */
+  overflow-y: auto; /* Permite a rolagem apenas dentro da área */
+  padding: 10px;
+}
+
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Cria uma grade com 5 colunas */
+  gap: 20px; /* Espaço entre os cards */
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  width: 150px; /* Largura fixa */
+  height: 200px; /* Altura fixa */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garantir que a imagem e o texto tenham espaço */
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+.pokemon-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+  margin: 2px 0;
+}

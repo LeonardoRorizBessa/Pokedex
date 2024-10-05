@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 20px;
+}
+
+.img-pokeball, .img-profile {
+  width: 40px;
+  height: auto;
+}

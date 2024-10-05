@@ -1,0 +1,17 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.col-header {
+  background-color: #1c1c1c;
+}
+
+.col-filter {
+  background-color: rgb(239, 155, 0);
+}
+
+.col-pokedex {
+  background-color: rgb(194, 0, 0);
+}
