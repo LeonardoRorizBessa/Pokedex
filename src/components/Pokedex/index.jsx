@@ -130,8 +130,8 @@ export default function Pokedex({ filters }) {
           <h2>{selectedPokemon.name}</h2>
           <img src={selectedPokemon.sprites.front_default} alt={selectedPokemon.name} />
           <p>ID: {selectedPokemon.id}</p>
-          <p>Altura: {selectedPokemon.height}</p>
-          <p>Peso: {selectedPokemon.weight}</p>
+          <p>Altura: {selectedPokemon.height} Mt</p>
+          <p>Peso: {selectedPokemon.weight} Kg</p>
           <p>Habilidades: {selectedPokemon.abilities.map(a => a.ability.name).join(', ')}</p>
           <p>Estatísticas: {selectedPokemon.stats.map(stat => `${stat.stat.name}: ${stat.base_stat}`).join(', ')}</p>
         </div>

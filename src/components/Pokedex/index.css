@@ -74,10 +74,10 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #dddddd;
   padding: 20px;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 350px;
   width: 90%;
   position: relative;
   text-align: center;
