@@ -19,20 +19,14 @@
 .search input {
   width: 100%;
   padding: 10px 15px;
-  border: 2px solid #ccc;
+  border: 2px solid #000;
   border-radius: 25px;
   font-size: 16px;
-  color: #333;
+  color: #222;
   outline: none;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-}
-
-.search input:focus {
-  border-color: #6390F0; /* Cor ao focar (tema do Pokémon Water) */
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ddd;
 }
 
 .search input::placeholder {
